@@ -19,7 +19,7 @@ namespace aspnet_streaming_json.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public async Task<IAsyncEnumerable<WeatherForecast>> Get()
+        public IAsyncEnumerable<WeatherForecast> Get()
         {
             async IAsyncEnumerable<WeatherForecast> StreamWeatherForecastAsync()
             {
